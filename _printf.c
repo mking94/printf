@@ -36,5 +36,6 @@ else
 len = len + print_char(format[i]);
 i++;
 }
+}
 return (len);
 }
