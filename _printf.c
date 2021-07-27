@@ -40,6 +40,10 @@ else if(format[i+1] == 'x'){
 len = len + print_int(tohex(va_arg(arg,int)));
 i = i + 2;
 }
+else if(format[i+1] == 'x'){
+len = len + print_pointer(va_arg(arg,unsigned long));
+i = i + 2;
+}
 } 
 else 
 len = len + print_char(format[i]);
