@@ -12,12 +12,7 @@ va_list arg;
 va_start(arg,format);
 while(format[i]!='\0')
 {
-if(format[i+1] == '%'){
-len=len+_putchar('%');
-i = i + 2;
- }
-i=i+2;
- if(format[i+1] == 'd' || format[i+1] == 'i'){
+if(format[i+1] == 'd' || format[i+1] == 'i'){
 len = len + print_int((int)va_arg(arg,int));
 i = i + 2;
 }
