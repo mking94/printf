@@ -46,6 +46,7 @@ i = i + 2;
 }
 } 
 else 
+{
 len = len + print_char(format[i]);
 i++;
 }
