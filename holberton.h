@@ -3,8 +3,6 @@
 #include <limits.h>
 #include <stdio.h>
 #include <unistd.h>
-#include <stdarg.h>
-#include <stdlib.h>
 /* functions prototype */
 int _printf(const char *format, ...);
 int _putchar(char c);
