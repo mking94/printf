@@ -17,15 +17,15 @@ len=len+_putchar('%');
 i = i + 2;
  }
 i=i+2;
-else  if(format[i+1] == 'd' || format[i+1] == 'i'){
+ if(format[i+1] == 'd' || format[i+1] == 'i'){
 len = len + print_int((int)va_arg(arg,int));
 i = i + 2;
 }
-else if(format[i+1] == 'c'){
+ if(format[i+1] == 'c'){
 len = len + print_char((char)va_arg(arg,int));
 i = i + 2;
 }
-else if(format[i+1] == 's'){
+ if(format[i+1] == 's'){
 len = len + print_string(va_arg(arg,char *));
 i = i + 2;
 }
