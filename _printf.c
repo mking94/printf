@@ -12,9 +12,12 @@ va_list arg;
 va_start(arg,format);
 while(format[i]!='\0')
 {
-if(format[i+1] == '%'){_putchar('%');
+else if(format[i+1] == '%'){
+len=len+_putchar('%');
+i = i + 2;
+ }
 i=i+2;
-if(format[i+1] == 'd' || format[i+1] == 'i'){
+ else if(format[i+1] == 'd' || format[i+1] == 'i'){
 len = len + print_int((int)va_arg(arg,int));
 i = i + 2;
 }
@@ -31,19 +34,19 @@ len = len + print_int(tobin(va_arg(arg,int)));
 i = i + 2;
 }
 else if(format[i+1] == 'o'){
-  //len = len + print_int(tooct(va_arg(arg,int)));
+len = len + print_int(tooct(va_arg(arg,int)));
 i = i + 2;
 }
 else if(format[i+1] == 'X'){
-  //len = len + print_int(toHEX(va_arg(arg,int)));
+len = len + print_int(toHEX(va_arg(arg,int)));
 i = i + 2;
 }
 else if(format[i+1] == 'x'){
-  //len = len + print_int(tohex(va_arg(arg,int)));
+len = len + print_int(tohex(va_arg(arg,int)));
 i = i + 2;
 }
 else if(format[i+1] == 'p'){
-  //len = len + print_pointer(va_arg(arg,unsigned long));
+len=len+_putchar('%');
 i = i + 2;
 }*/
 } 
