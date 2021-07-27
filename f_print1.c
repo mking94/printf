@@ -30,7 +30,7 @@ int print_string(char *arg)
 /**
  *print_int - print a number
  *@arg: input
- * Return: int length
+ * Return: int length.
  */
 int print_int(int n)
 {
