@@ -56,14 +56,3 @@ int print_int(int n)
     }
     return (count);
 }
- *print_percent - print percent
- *@arg: input
- * Return: integer
- *
-int print_percent(persent arg)
-{
-    (void)arg;
-    _putchar('%');
-    return (1);
-}
-
