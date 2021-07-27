@@ -44,11 +44,11 @@ i = i + 2;
 else if(format[i+1] == 'x'){
 len = len + print_int(tohex(va_arg(arg,int)));
 i = i + 2;
-}
-else if(format[i+1] == 'p'){
+}*/
+else if(format[i+1] == '%'){
 len=len+_putchar('%');
 i = i + 2;
-}*/
+}
 } 
 else 
 len = len + print_char(format[i]);
