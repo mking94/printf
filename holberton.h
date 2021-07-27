@@ -1,5 +1,7 @@
 #ifndef PRINTF_H
 #define PRINTF_H
+#include <limits.h>
+#include <stdio.h>
 #include <unistd.h>
 /* functions prototype */
 int _printf(const char *format, ...);
