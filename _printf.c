@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdarg.h>
 /**
  * _printf - print all (printf reecreation)
  * @format: format specifier
@@ -21,11 +20,11 @@ i=i+2;
 len = len + print_int((int)va_arg(arg,int));
 i = i + 2;
 }
- if(format[i+1] == 'c'){
+else if(format[i+1] == 'c'){
 len = len + print_char((char)va_arg(arg,int));
 i = i + 2;
 }
- if(format[i+1] == 's'){
+else if(format[i+1] == 's'){
 len = len + print_string(va_arg(arg,char *));
 i = i + 2;
 }
