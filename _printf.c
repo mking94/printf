@@ -17,7 +17,7 @@ len=len+_putchar('%');
 i = i + 2;
  }
 i=i+2;
- else if(format[i+1] == 'd' || format[i+1] == 'i'){
+  if(format[i+1] == 'd' || format[i+1] == 'i'){
 len = len + print_int((int)va_arg(arg,int));
 i = i + 2;
 }
