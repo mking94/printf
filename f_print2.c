@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * print_b - convert an integer to binary (base 2).
+ * print_tobin - convert an integer to binary (base 2).
  *
  * @arg: input
  *
