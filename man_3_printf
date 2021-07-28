@@ -1,4 +1,4 @@
-.TH _printf  "26 jul 2021" "0.1" "_printf man page"
+.TH man 3 "26 jul 2021" "0.1" "_printf man page"
 
 .Sh NAME
 .B _print
