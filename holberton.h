@@ -12,4 +12,8 @@ int _putchar(char c);
 int print_char(char arg);
 int print_string(char *arg);
 int print_int(int arg);
+int tobin(int arg);
+int tooct(int arg);
+char *tohex(int arg);
+char *toHEX(int arg);
 #endif/* PRINTF_H */
