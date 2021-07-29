@@ -1,133 +1,62 @@
 #include "holberton.h"
 /**
- * print_tobin - convert an integer to binary (base 2).
+ * tobin - convert an integer to binary (base 2).
  *
  * @arg: input
  *
- *  Return: number of printed element.
+ * Return: binary number.
  */
-int print_tobin(int arg)
+int tobin(int arg)
 {
-	unsigned int binary[32];
-	int i = 0;
-	unsigned int n = 0, count = 0;
-
-	n = va_arg(arg, unsigned int);
-
-	if (n <= 1)
-	{
-		_putchar(n + '0');
-		count++;
-	}
-	else
-	{
-		while (n > 0)
-		{
-			binary[i] = n % 2;
-			n = n / 2;
-			i++;
-		}
-		for (i = i - 1; i >= 0; i--)
-		{
-			_putchar(binary[i] + '0');
-			count++;
-		}
-	}
-	return (count);
+long binarynum = 0;
+int rem, temp = 1;
+while (arg != 0)
+{
+rem = arg % 2;
+arg = arg / 2;
+binarynum = binarynum + (rem *temp);
+temp = temp * 10;
+}
+return (binarynum);
 }
 /**
- * print_o - prints an octal.
+ * tooct - prints an octal.
  * @o: input
- * Return: number of printed characters.
+ * Return: octal number.
  */
-int print_tooct(int o)
+int tooct(int arg)
 {
-	unsigned int octal[11];
-	unsigned int count = 0, n = 0;
-	int i = 0;
-
-	n = va_arg(o, unsigned int);
-	if (n == 0)
-	{
-		_putchar(0 + '0');
-		count++;
-	}
-	while (n > 0)
-	{
-		octal[i] = n % 8;
-		n = n / 8;
-		i++;
-	}
-	for (--i; i >= 0; i--)
-	{
-		_putchar(octal[i] + '0');
-		count++;
-	}
-	return (count);
+long oct = 0;
+int rem, temp = 1;
+while (arg != 0)
+{
+rem = arg % 8;
+arg = arg / 8;
+oct = oct + (rem *temp);
+temp = temp * 10;
+}
+return (oct);
 }
 /**
- *  print_x - prints input integer to an hexadecimal in lowercase
- *  @x: input
- *  Return: number of printed characters
+ *  tohex - prints input integer to an hexadecimal in uppercase
+ *  @arg: input
+ *  Return: Hexadecimal
  */
-int print_tohex(int x)
+char *toHEX(int arg)
 {
-	char hex[20];
-	unsigned int count = 0, n = 0;
-	int i = 0;
-
-	n = va_arg(x, unsigned int);
-	if (n == 0)
-	{
-		_putchar(0 + '0');
-		count++;
-	}
-	while (n > 0)
-	{
-		if (n % 16 >= 10 && n % 16 <= 15)
-			hex[i] = 87 + (n % 16);
-		else
-			hex[i] = 48 + (n % 16);
-		n = n / 16;
-		i++;
-	}
-	for (--i; i >= 0; i--)
-	{
-		_putchar(hex[i]);
-		count++;
-	}
-	return (count);
+int rem, i = 0;
+char hex[2541];
+while (arg != 0)
+{
+rem = arg % 16;
+arg = arg / 16;
+if(rem<10)
+hex[i++] = ((char)48 + rem);
+else
+hex[i++] = ((char)rem + 55);
 }
-/**
- * print_X - prints input integer to an hexadecimal in uppercase
- * @X: input
- * Return: number of printed characters
- */
-int print_HEX(int X)
-{
-	char hex[20];
-	unsigned int count = 0, n = 0;
-	int i = 0;
-
-	n = va_arg(X, unsigned int);
-	if (n == 0)
-	{
-		_putchar(0 + '0');
-		count++;
-	}
-	while (n > 0)
-	{
-		if (n % 16 >= 10 && n % 16 <= 15)
-			hex[i] = 55 + (n % 16);
-		else
-			hex[i] = 48 + (n % 16);
-		n = n / 16;
-		i++;
-	}
-	for (--i; i >= 0; i--)
-	{
-		_putchar(hex[i]);
-		count++;
-	}
-	return (count);
+hex[i]='\0';
+char *p ;
+p = hex;
+return (p);
 }
