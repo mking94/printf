@@ -6,10 +6,10 @@
  *
  * Return: binary number.
  */
-int tobin(int arg)
+unsigned int tobin(unsigned int arg)
 {
-long binarynum = 0;
-int rem, temp = 1;
+unsigned int  binarynum = 0;
+unsigned int rem, temp = 1;
 while (arg != 0)
 {
 rem = arg % 2;
