@@ -50,10 +50,33 @@ while (arg != 0)
 {
 rem = arg % 16;
 arg = arg / 16;
-if(rem<10)
+if(rem < 10)
 hex[i++] = ((char)48 + rem);
 else
 hex[i++] = ((char)rem + 55);
+}
+hex[i]='\0';
+char *p ;
+p = hex;
+return (p);
+}
+/**
+ *  tohex - prints input integer to an hexadecimal in lowercase
+ *  @arg: input
+ *  Return: Hexadecimal
+ */
+char *tohex(int arg)
+{
+int rem, i = 0;
+char hex[2541];
+while (arg != 0)
+{
+rem = arg % 16;
+arg = arg / 16;
+if(rem < 10)
+hex[i++] = ((char)48 + rem);
+else
+hex[i++] = ((char)rem + 87);
 }
 hex[i]='\0';
 char *p ;
