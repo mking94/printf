@@ -30,7 +30,7 @@ len = len + print_string(va_arg(arg,char *));
 i = i + 2;
 }
 else if(format[i+1] == 'b'){
-len=len + print_int(tobin(va_arg(arg,int)));
+len=len + print_unsigned_int(tobin(va_arg(arg,unsigned int)));
 i = i + 2;
 }
 else if(format[i+1] == 'o'){
