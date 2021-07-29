@@ -69,6 +69,7 @@ char *tohex(int arg)
 {
 int rem, i = 0;
 char hex[2541];
+char *p ;
 while (arg != 0)
 {
 rem = arg % 16;
@@ -79,7 +80,6 @@ else
 hex[i++] = ((char)rem + 87);
 }
 hex[i]='\0';
-char *p ;
 p = hex;
 return (p);
 }
