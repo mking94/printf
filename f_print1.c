@@ -65,8 +65,9 @@ unsigned int print_unsigned_int(unsigned int n)
 {
   unsigned int count = 0, rest = 1;
   unsigned int x;
+  unsigned int zero=0;
     x = n;
-    if (n < 0)
+    if (n < zero)
     {
         _putchar('-');
         x = -x;
