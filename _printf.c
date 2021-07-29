@@ -17,6 +17,10 @@ if(format[i+1] == 'd' || format[i+1] == 'i'){
 len = len + print_int((int)va_arg(arg,int));
 i = i + 2;
 }
+else if(format[i+1] == 'u'){
+len = len + print_unsigned_int((unsigned int)va_arg(arg,int));
+i = i + 2;
+}
 else if(format[i+1] == 'c'){
 len = len + print_char((char)va_arg(arg,int));
 i = i + 2;
