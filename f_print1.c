@@ -57,11 +57,11 @@ int print_int(int n)
     return (count);
 }
 /**
- *print_Unsigned_int - print a number
+ *print_unsigned_int - print a number
  *@arg: input
  * Return: int length.
  */
-unsigned int print_int(unsigned int n)
+unsigned int print_unsigned_int(unsigned int n)
 {
   unsigned int count = 0, rest = 1;
   unsigned int x;
