@@ -7,8 +7,8 @@
  */
 int print_char(char arg)
 {
-	_putchar(arg);
-	return (1);
+_putchar(arg);
+return (1);
 }
 /**
  *print_string - print a string
@@ -17,15 +17,15 @@ int print_char(char arg)
  */
 int print_string(char *arg)
 {
-	int len = 0;
-	if (arg == NULL)
-		arg = "(null)";
-	while (arg[len] != '\0')
-	{
-		_putchar(arg[len]);
-		len++;
-	}
-	return (len);
+int len = 0;
+if (arg == NULL)
+arg = "(null)";
+while (arg[len] != '\0')
+{
+_putchar(arg[len]);
+len++;
+}
+return (len);
 }
 /**
  *print_int - print a number
@@ -34,27 +34,27 @@ int print_string(char *arg)
  */
 int print_int(int n)
 {
-    int count = 0, rest = 1;
-    unsigned int x;
-    x = n;
-    if (n < 0)
-    {
-        _putchar('-');
-        x = -x;
-        count++;
-    }
-    while ((x / rest) > 9)
-    {
-        rest = rest * 10;
-    }
-    while (rest > 0)
-    {
-        _putchar(x / rest + '0');
-        x = (x % rest);
-        rest = rest / 10;
-        count++;
-    }
-    return (count);
+int count = 0, rest = 1;
+int x;
+x = n;
+if (n < 0)
+{
+_putchar('-');
+x = -x;
+count++;
+}
+while ((x / rest) > 9)
+{
+rest = rest * 10;
+}
+while (rest > 0)
+{
+_putchar(x / rest + '0');
+x = (x % rest);
+rest = rest / 10;
+count++;
+}
+return (count);
 }
 /**
  *print_unsigned_int - print a number
@@ -63,26 +63,26 @@ int print_int(int n)
  */
 unsigned int print_unsigned_int(unsigned int n)
 {
-  unsigned int count = 0, rest = 1;
-  unsigned int x;
-  unsigned int zero=0;
-    x = n;
-    if (n < zero)
-    {
-        _putchar('-');
-        x = -x;
-        count++;
-    }
-    while ((x / rest) > 9)
-    {
-        rest = rest * 10;
-    }
-    while (rest > 0)
-    {
-        _putchar(x / rest + '0');
-        x = (x % rest);
-        rest = rest / 10;
-        count++;
-    }
-    return (count);
+unsigned int count = 0, rest = 1;
+unsigned int x;
+unsigned int zero=0;
+x = n;
+if (n < zero)
+{
+_putchar('-');
+x = -x;
+count++;
+}
+while ((x / rest) > 9)
+{
+rest = rest * 10;
+}
+while (rest > 0)
+{
+_putchar(x / rest + '0');
+x = (x % rest);
+rest = rest / 10;
+count++;
+}
+return (count);
 }
