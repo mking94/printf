@@ -12,17 +12,19 @@ int tobin(unsigned int arg)
 {
 double  binarynum = 0;
 double rem, temp = 1;
+char output[2048];
+int i = 0;
 while (arg != 0)
 {
 rem = arg % 2;
 arg = arg / 2;
 binarynum = binarynum + (rem *temp);
 temp = temp * 10;
+i++;
 }
-char output[(int)log10(temp) + 1];
-snprintf(output, (int)log10(temp) + 1, "%.f", trunc(binarynum));
+snprintf(output, i, "%.f", trunc(binarynum));
 puts(output);
-return ((int)log10(temp));
+return (i);
 }
 /**
  * tooct - prints an octal.
