@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include <stdlib.h>
-#include <math.h>
 /**
  * tobin - convert print an integer to binary (base 2).
  *
@@ -22,7 +20,7 @@ binarynum = binarynum + (rem *temp);
 temp = temp * 10;
 i++;
 }
-snprintf(output, i, "%.f", trunc(binarynum));
+snprintf(output, i, "%.f", binarynum);
 puts(output);
 return (i);
 }
