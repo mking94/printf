@@ -6,7 +6,7 @@
  *
  * Return: void.
  */
-void *tobin(unsigned int arg)
+int*tobin(unsigned int arg)
 {
 double  binarynum = 0;
 double rem, temp = 1;
@@ -20,6 +20,7 @@ temp = temp * 10;
 char output[(int)log10(temp) + 1];
 snprintf(output, (int)log10(temp) + 1, "%.f", trunc(binarynum));
 printf("%s",output);
+return ((int)log10(temp));
 }
 /**
  * tooct - prints an octal.
