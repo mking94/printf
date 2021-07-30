@@ -83,3 +83,18 @@ hex[i]='\0';
 p = hex;
 return (p);
 }
+/**
+ *  print - prints input integer
+ *  @n: input
+ *  Return: void
+ */
+void print(long n)
+{
+if (n < 0) {
+putchar('-');
+n = -n;
+}
+if (n/10)
+print(n/10);
+putchar(n%10 + '0');
+}
