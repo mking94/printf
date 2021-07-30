@@ -1,15 +1,15 @@
 #include "holberton.h"
 /**
- * tobin - convert an integer to binary (base 2).
+ * tobin - convert print an integer to binary (base 2).
  *
  * @arg: input
  *
- * Return: binary number.
+ * Return: void.
  */
-unsigned int tobin(unsigned int arg)
+void *tobin(unsigned int arg)
 {
-unsigned int  binarynum = 0;
-unsigned int rem, temp = 1;
+double  binarynum = 0;
+double rem, temp = 1;
 while (arg != 0)
 {
 rem = arg % 2;
@@ -17,7 +17,9 @@ arg = arg / 2;
 binarynum = binarynum + (rem *temp);
 temp = temp * 10;
 }
-return (binarynum);
+char output[(int)log10(temp) + 1];
+snprintf(output, (int)log10(temp) + 1, "%.f", trunc(binarynum));
+printf("%s",output);
 }
 /**
  * tooct - prints an octal.
