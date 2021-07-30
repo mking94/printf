@@ -8,8 +8,8 @@
  */
 int tobin(unsigned int arg)
 {
-unsigned int  binarynum = 0;
-unsigned int rem, temp = 1;
+double  binarynum = 0;
+double rem, temp = 1;
 while (arg != 0)
 {
 rem = arg % 2;
