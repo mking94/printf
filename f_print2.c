@@ -8,8 +8,8 @@
  */
 int tobin(unsigned int arg)
 {
-unsigned int  binarynum = 0;
-unsigned int rem, temp = 1;
+double  binarynum = 0;
+double int rem, temp = 1;
 int i = 0;
 while (arg != 0)
 {
@@ -23,7 +23,7 @@ temp = temp / 10;
 while(binarynum != 0)
 {
 putchar(48+(binarynum / temp));
-binarynum = binarynum % temp;
+binarynum = (int)binarynum % (int)temp;
 temp = temp / 10;
 }
 return (i);
