@@ -6,7 +6,7 @@
  *
  * Return: void.
  */
-int*tobin(unsigned int arg)
+int tobin(unsigned int arg)
 {
 double  binarynum = 0;
 double rem, temp = 1;
