@@ -9,7 +9,7 @@
 int tobin(unsigned int arg)
 {
 double  binarynum = 0;
-double int rem, temp = 1;
+double  rem, temp = 1;
 int i = 0;
 while (arg != 0)
 {
