@@ -23,7 +23,7 @@ int len = i;
 i--;
 while(i >= 0)
 {
-putchar(res[i--]);
+_putchar(res[i--]);
 }
 return (len);
 }
