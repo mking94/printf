@@ -36,7 +36,7 @@ i = i + 2;
 }
 else if (format[i + 1] == 'b')
 {
-len = len + tobin(va_arg(arg, unsigned int));
+len = len + print_int(tobin(va_arg(arg, unsigned int)));
 i = i + 2;
 }
 else if (format[i + 1] == 'o')
