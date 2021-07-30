@@ -4,7 +4,7 @@
  *
  * @arg: input
  *
- * Return: void.
+ * Return: binary number.
  */
 int tobin(unsigned int arg)
 {
