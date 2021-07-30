@@ -8,8 +8,8 @@
  */
 int tobin(unsigned int arg)
 {
-int  binarynum = 0;
-int rem, temp = 1;
+unsigned int  binarynum = 0;
+unsigned int rem, temp = 1;
 while (arg != 0)
 {
 rem = arg % 2;
@@ -17,7 +17,7 @@ arg = arg / 2;
 binarynum = binarynum + (rem *temp);
 temp = temp * 10;
 }
-retrun (binarynum);
+retrun ((int)binarynum);
 }
 /**
  * tooct - prints an octal.
