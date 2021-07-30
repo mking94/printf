@@ -11,7 +11,7 @@ int tobin(unsigned int arg)
 double  binarynum = 0;
 double rem, temp = 1;
 char output[2048];
-int i = 0;
+int i = 0,j;
 while (arg != 0)
 {
 rem = arg % 2;
@@ -21,7 +21,8 @@ temp = temp * 10;
 i++;
 }
 snprintf(output, i, "%.f", binarynum);
-puts(output);
+for(j = 0; j < i;i++)
+_putchar(output[j]);
 return (i);
 }
 /**
