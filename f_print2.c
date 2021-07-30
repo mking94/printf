@@ -6,7 +6,7 @@
  *
  * Return: void.
  */
-double tobin(unsigned int arg)
+int tobin(unsigned int arg)
 {
 double  binarynum = 0;
 double  rem, temp = 1;
@@ -17,7 +17,7 @@ arg = arg / 2;
 binarynum = binarynum + (rem *temp);
 temp = temp * 10;
 }
-return (binarynum);
+return ((int)binarynum);
 }
 /**
  * tooct - prints an octal.
