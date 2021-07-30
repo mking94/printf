@@ -6,18 +6,26 @@
  *
  * Return: binary number.
  */
-double tobin(unsigned int arg)
+int tobin(unsigned int arg)
 {
 double  binarynum = 0;
 double  rem, temp = 1;
+char res[1024]; int i=0;
 while (arg != 0)
 {
 rem = arg % 2;
+res[i]=(char)48+rem;
 arg = arg / 2;
-binarynum = binarynum + (rem *temp);
-temp = temp * 10;
+i++;
 }
-return (binarynum);
+res[i]='\0';
+int len = i;
+i--;
+while(i >= 0)
+{
+putchar(res[i--]);
+}
+return (len);
 }
 /**
  * tooct - prints an octal.
