@@ -19,7 +19,7 @@ temp = temp * 10;
 }
 char output[(int)log10(temp) + 1];
 snprintf(output, (int)log10(temp) + 1, "%.f", trunc(binarynum));
-printf("%s",output);
+puts(output);
 return ((int)log10(temp));
 }
 /**
