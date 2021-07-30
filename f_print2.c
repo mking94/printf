@@ -23,7 +23,7 @@ temp = temp / 10;
 while(binarynum != 0)
 {
 putchar(48+(binarynum / temp));
-binarynum =binarynum % temp;
+binarynum = binarynum % temp;
 temp = temp / 10;
 }
 return (i);
