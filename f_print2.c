@@ -8,24 +8,16 @@
  */
 int tobin(unsigned int arg)
 {
-double  binarynum = 0;
-double  rem, temp = 1;
-char res[1024]; int i=0;
+int  binarynum = 0;
+int rem, temp = 1;
 while (arg != 0)
 {
 rem = arg % 2;
-res[i]=(char)48+rem;
 arg = arg / 2;
-i++;
+binarynum = binarynum + (rem *temp);
+temp = temp * 10;
 }
-res[i]='\0';
-int len = i;
-i--;
-while(i >= 0)
-{
-_putchar(res[i--]);
-}
-return (len);
+retrun (binarynum);
 }
 /**
  * tooct - prints an octal.
