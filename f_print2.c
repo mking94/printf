@@ -1,4 +1,6 @@
 #include "holberton.h"
+#include <stdlib.h>
+#include <math.h>
 /**
  * tobin - convert print an integer to binary (base 2).
  *
