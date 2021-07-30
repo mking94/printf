@@ -10,8 +10,7 @@ int tobin(unsigned int arg)
 {
 double  binarynum = 0;
 double rem, temp = 1;
-char output[2048];
-int i = 0,j;
+int i = 0;
 while (arg != 0)
 {
 rem = arg % 2;
@@ -20,9 +19,13 @@ binarynum = binarynum + (rem *temp);
 temp = temp * 10;
 i++;
 }
-snprintf(output, i, "%.f", binarynum);
-for(j = 0; j < i;i++)
-_putchar(output[j]);
+temp = temp / 10;
+while(binarynum != 0)
+{
+putchar(48+(binarynum / temp));
+binarynum =(int) binarynum % (int)temp;
+temp = temp / 10;
+}
 return (i);
 }
 /**
