@@ -6,27 +6,18 @@
  *
  * Return: void.
  */
-int tobin(unsigned int arg)
+double tobin(unsigned int arg)
 {
-int  binarynum = 0;
-int  rem, temp = 1;
-int i = 0;
+double  binarynum = 0;
+double  rem, temp = 1;
 while (arg != 0)
 {
 rem = arg % 2;
 arg = arg / 2;
 binarynum = binarynum + (rem *temp);
 temp = temp * 10;
-i++;
 }
-temp = temp / 10;
-while(binarynum != 0)
-{
-putchar(48+(binarynum / temp));
-binarynum = binarynum % temp;
-temp = temp / 10;
-}
-return (i);
+return (binarynum);
 }
 /**
  * tooct - prints an octal.
